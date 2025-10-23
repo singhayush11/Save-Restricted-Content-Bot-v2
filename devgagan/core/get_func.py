@@ -344,7 +344,7 @@ async def clone_message(app, msg, target_chat_id, topic_id, edit_id, log_group):
 
 async def clone_text_message(app, msg, target_chat_id, topic_id, edit_id, log_group):
     edit = await app.edit_message_text(target_chat_id, edit_id, "Cloning text message...")
-    devgaganin = await app.send_message(target_chat_id, msg.text.markdown, reply_to_message_id=toasyncsyncPY'PY'ic_id)
+    devgaganin = await app.send_message(target_chat_id, msg.text.markdown, reply_to_message_id=topic_id)
     await devgaganin.copy(log_group)
     await edit.delete()
 
